@@ -19,5 +19,5 @@ e aperfeiçoado como parte de aprendizado da disciplina.
 ## Uso elementar:
 
 ```julia
-To do
+To do later
 ```
