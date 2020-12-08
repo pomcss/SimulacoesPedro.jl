@@ -1,5 +1,6 @@
 module SimulacoesPedro
 
-# Write your package code here.
+    include("Data.jl")
+    export Data
 
 end
