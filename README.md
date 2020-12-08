@@ -21,7 +21,7 @@ e aperfeiçoado como parte de aprendizado da disciplina.
 ## Uso elementar:
 
 ```julia
-julia> using SimulacoesTemplate
+julia> using SimulacoesPedro
 
 julia> data = Data() # Default parameters
 Data
