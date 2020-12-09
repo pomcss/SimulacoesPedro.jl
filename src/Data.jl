@@ -4,7 +4,7 @@
 
 using Parameters
 
-@with_kw strict Data
+@with_kw struct Data
 
     ε :: Float64 = 5.0
     σ :: Float64 = 0.5
@@ -18,5 +18,6 @@ using Parameters
     ε4 :: Float64 = 4*ε
     σ6 :: Float64 = σ^6
     σ12 :: Float64 = σ^12
+    cutoff2 :: Float64 = cutoff^2
 
 end

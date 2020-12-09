@@ -34,7 +34,7 @@ Use a random seed:
 p = initial_point(10_000,100,0.5,seed=-1)
 ```
 """
-function initial_point(N,side,tol;seed=123)
+function initial_point(N,bdim,tol;seed=123)
 
   # Use a different seed if desired
   if seed > 0
@@ -46,9 +46,9 @@ function initial_point(N,side,tol;seed=123)
 
   # Properties of the regular grid
   l = ceil(Int,sqrt(N))
-  step = (side-tol)/l
+  step = (bdim-tol)/l
   if tol > step
-    error("tol must be smaller than (side-tol)/√N = $step")
+    error("tol must be smaller than (bdim-tol)/√N = $step")
   end
 
   # The grid has l^2 points, but this is generally greater
@@ -87,4 +87,4 @@ function initial_point(N,side,tol;seed=123)
 end
 
 # From data
-initial_point(data::Data;tol=0.9,seed=123) = initial_point(data.N,data.side,tol,seed=seed)
+initial_point(data::Data;tol=0.9,seed=123) = initial_point(data.N,data.bdim,tol,seed=seed)
