@@ -19,6 +19,7 @@ module SimulacoesPedro
     include("r2pbc.jl")
     include("upair2.jl")
     include("utotal2.jl")
+    include("utotal2_generic.jl")
     export utotal2
 
 end

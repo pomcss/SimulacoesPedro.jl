@@ -1,8 +1,12 @@
 #
 # Computes the total potential energy of the system using r2
+# and a generic potential function
+#
+# You should pass it using fpair = r2 -> f(r2, var...)
+# Define Data() as const for better performance
 #
 
-function utotal2(p,data)
+function utotal2_generic(p, data::Data; fpair::Function = r2 -> upair2(r2,data::Data))
     first_atom = zeros(Int64, data.nc, data.nc)
     next_atom = zeros(Int64, data.N)
     makell!(first_atom, next_atom, p, data.cutoff)
@@ -19,7 +23,7 @@ function utotal2(p,data)
                     if ip < jp
                         r2 = r2pbc(p[ip], p[jp], data.bdim)
                         if r2 ≤ data.cutoff2
-                            ut += upair2(r2, data)
+                            ut += fpair(r2)
                         end
                     end
                     jp = next_atom[jp]
