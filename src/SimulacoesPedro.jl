@@ -11,7 +11,12 @@ module SimulacoesPedro
     include("rpbc.jl")
     include("upair.jl")
     include("utotal.jl")
+    include("linear_index.jl")
+    include("utotal_parallel.jl")
     export utotal
+    export utotal_parallel1
+    export utotal_parallel2
+    export utotal_serial2
 
     # Linked List potential
     include("makell.jl")
@@ -20,6 +25,7 @@ module SimulacoesPedro
     include("upair2.jl")
     include("utotal2.jl")
     include("utotal2_generic.jl")
-    export utotal2
+    include("utotal2_parallel.jl")
+    export utotal2, utotal2_parallel
 
 end
