@@ -6,7 +6,7 @@ function upair3(p1, p2, data)
     dx = p1[1] - p2[1]
     dy = p1[2] - p2[2]
     r = sqrt(dx^2 + dy^2)
-    r6 = r2^6
+    r6 = r^6
     r7 = r6*r
     r12 = r6^2
     r13 = r12*r
