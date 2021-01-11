@@ -90,3 +90,5 @@ end
 function initial_point(data::Data;tol=0.9,seed=123)
   return initial_point(data.N,data.bdim,tol,seed=seed)
 end
+
+export initial_point
