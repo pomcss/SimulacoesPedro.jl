@@ -87,4 +87,6 @@ function initial_point(N,bdim,tol;seed=123)
 end
 
 # From data
-initial_point(data::Data;tol=0.9,seed=123) = initial_point(data.N,data.bdim,tol,seed=seed)
+function initial_point(data::Data;tol=0.9,seed=123)
+  return initial_point(data.N,data.bdim,tol,seed=seed)
+end
