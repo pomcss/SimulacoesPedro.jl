@@ -23,6 +23,7 @@ module SimulacoesPedro
     include("wrap_cell.jl")
     include("r2pbc.jl")
     include("upair2.jl")
+    include("upair3.jl")
     include("utotal2.jl")
     include("utotal2_generic.jl")
     include("utotal2_parallel.jl")
