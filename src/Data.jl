@@ -17,7 +17,7 @@ using Parameters
     # Data for computation
     nc :: Int64 = (bdim % cutoff == 0) ? trunc(Int64, bdim/cutoff) : trunc(Int64, bdim/cutoff + 1)
     ε4 :: Float64 = 4*ε
-    ε48 :: Float64 = 48*ε
+    ε24 :: Float64 = 24*ε
     σ6 :: Float64 = σ^6
     σ12 :: Float64 = σ^12
     cutoff2 :: Float64 = cutoff^2

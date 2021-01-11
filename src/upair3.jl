@@ -5,12 +5,12 @@
 function upair3(p1, p2, data)
     dx = p1[1] - p2[1]
     dy = p1[2] - p2[2]
-    r = sqrt(dx^2 + dy^2)
-    r6 = r^6
-    r7 = r6*r
+    r2 = dx^2 + dy^2
+    r6 = r^2
+    r8 = r6*r2
     r12 = r6^2
-    r13 = r12*r
+    r14 = r12*r2
     u = data.ε4*(data.σ12/r12 - data.σ6/r6)
-    f = data.ε48*(2*data.σ12/r13 - data.σ6/r7) * [dx, dy]
+    f = data.ε24*(2*data.σ12/r14 - data.σ6/r8) * [dx, dy]
     return u, f
 end
