@@ -27,6 +27,7 @@ module SimulacoesPedro
     include("utotal2.jl")
     include("utotal2_generic.jl")
     include("utotal2_parallel.jl")
-    export utotal2, utotal2_parallel
+    include("utotal3.jl")
+    export utotal2, utotal2_parallel, utotal3!
 
 end
