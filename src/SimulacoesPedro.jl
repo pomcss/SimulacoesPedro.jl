@@ -3,9 +3,10 @@ module SimulacoesPedro
     include("Data.jl")
     export Data
 
-    # Initial point
+    # Initial point and velocity
     include("initial_point.jl")
-    export initial_point
+    include("initial_velocity.jl")
+    export initial_point, initial_velocity
 
     # Naive potential
     include("rpbc.jl")
@@ -28,6 +29,7 @@ module SimulacoesPedro
     include("utotal2_generic.jl")
     include("utotal2_parallel.jl")
     include("utotal3.jl")
-    export utotal2, utotal2_parallel, utotal3!
+    include("runsim.jl")
+    export utotal2, utotal2_parallel, utotal3!, runsim, runsim!
 
 end

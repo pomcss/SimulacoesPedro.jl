@@ -4,8 +4,8 @@
 
 function wrap_cell(nc ,ic)
     if ic < 1
-        iw = nc[1]
-    elseif ic > nc[1]
+        iw = nc
+    elseif ic > nc
         iw = 1
     else
         iw = ic

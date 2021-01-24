@@ -8,6 +8,7 @@ using Parameters
 
     ε :: Float64 = 5.0
     σ :: Float64 = 0.5
+    T :: Float64 = 298.15
 
     cutoff :: Float64 = 2.0
     bdim :: Float64 = 100.0

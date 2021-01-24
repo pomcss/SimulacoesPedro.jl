@@ -5,7 +5,7 @@
 function utotal2(p,data)
     first_atom = zeros(Int64, data.nc, data.nc)
     next_atom = zeros(Int64, data.N)
-    makell!(first_atom, next_atom, p, data.cutoff)
+    makell!(first_atom, next_atom, p, data)
     ut = 0.
     for ip = 1:data.N
         icell = trunc(Int64, p[ip][1]/data.cutoff) + 1
